@@ -1,0 +1,14 @@
+First convert the biom table into biom txt file using
+biom convert -b -i otu_table_mc2_w_tax.biom -o otu_table_mc2_w_tax.txt --table-type="OTU table"  --header-key taxonomy
+
+The data in biom files represents the number of observation of each OTUID for each sample. In our case we combined the samples by adding them and changing them into two samples Oral and Nasal.
+
+Convert the file back into biom file
+
+biom convert -i otu_table_mc2_w_tax.txt -o updated.biom --table-type="OTU table"
+
+Run the shared_phylotypes.py in qiime to obtain the comman phylotypes between Nasal and Oral samples.
+
+shared_phylotypes.py -i updated.biom -o share_py.txt
+
+Run plot.r to obtain the venn diagram, the input of plot.r has to be manipulated as per share.py.txt output
