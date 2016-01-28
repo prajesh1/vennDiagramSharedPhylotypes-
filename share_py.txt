@@ -1,0 +1,11 @@
+	Nasal	Oral	
+Nasal	9318	4611	
+Oral	4611	16024	
+			
+			
+			
+			
+	Nasal	9318	
+	Oral	16024	
+	Nasal ? Oral	4611	
+	Nasal U Oral	20731	20731
